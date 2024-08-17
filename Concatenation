@@ -1,0 +1,39 @@
+
+// creating a vector and taking the input of user and taking another vector and copying the contents of the 1st vector and copying both the vectors in the new vector and printing that vector gives us the result
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n;
+    cin>>n;
+     int a[n],b[n];
+    vector<int>result;
+    for(int i=0;i<n;i++)
+    {
+         cin>>a[i];
+    }
+     for(int i=0;i<n;i++)
+    {
+        b[i]=a[i];
+    }
+    for(int i=0;i<n;i++)
+    {
+        result.push_back(a[i]);
+    }
+    for(int i=0;i<n;i++)
+    {
+        result.push_back(b[i]);
+    }
+    for(int i=0;i<result.size();i++)
+    {
+        cout<<result[i]<<" ";
+    }
+    
+     
+    return 0;
+}
