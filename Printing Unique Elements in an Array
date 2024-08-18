@@ -1,0 +1,35 @@
+// taking a map and counting the frequencies of each elements and we will print the elements whose frequencies is 1
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include<set>
+#include<unordered_map>
+using namespace std;
+
+
+int main() {
+    unordered_map<int,int>result;
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    for(int i=0;i<n;i++)
+    {
+        result[a[i]]++;
+    }
+    for(int i=0;i<n;i++)
+    {
+        if(result[a[i]]==1)
+        {
+            cout<<a[i]<<" ";
+        }
+    }
+    
+    return 0;
+}
