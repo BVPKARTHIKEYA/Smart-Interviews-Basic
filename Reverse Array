@@ -1,0 +1,20 @@
+// we will read the array and we will access the array from end and we will print the reverse array
+#include <stdio.h>
+
+int main()
+{
+    int i,n;
+    
+    scanf("%d",&n);
+    long int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%ld",&a[i]);
+    }
+    for(i=n-1;i>=0;i--)
+    {
+        printf("%ld ",a[i]);
+    }
+    return 0;
+}
+
