@@ -1,0 +1,36 @@
+//by using nested loops finding if there are nested elements so creating a vector and pushing into the vector.
+//we can create a map and and if the frequency is greater than 1 we can push into that vector
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n;
+    vector<int>result;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        {
+            if(a[i]==a[j])
+            {
+                result.push_back(a[i]);
+            }
+        }
+    }
+    for(int i=0;i<result.size();i++)
+    {
+        cout<<result[i];
+    }
+    return 0;
+
+}
