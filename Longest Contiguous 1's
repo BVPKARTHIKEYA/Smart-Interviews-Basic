@@ -1,0 +1,35 @@
+// we can find longest contiguous 1's by creating a count variable and creating a max_count variable to track the count of it 
+
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n,maxc;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    int  count=0;
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]==1)
+        {
+            count++;
+            maxc=max(maxc,count);
+         }
+        else
+        {
+         count=0;   
+         }
+    }
+    cout<<maxc;
+    return 0;
+}
