@@ -1,0 +1,27 @@
+// altitude at every next point will be x+a[i] so by max_sum we will track of max altitude
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+   int max_sum=0;
+    int n;
+    int sum=0;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    for(int i=0;i<n;i++)
+    {
+        sum+=arr[i];
+        max_sum=max(max_sum,sum);
+    }
+    cout<<max_sum;
+    return 0;
+}
