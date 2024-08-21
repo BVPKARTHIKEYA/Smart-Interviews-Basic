@@ -1,0 +1,47 @@
+//transpose of a matrix
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+void swap(int &a,int &b)
+{
+    int t=a;
+    a=b;
+    b=t;
+}
+int main() {
+    int n;
+     int m;
+    cin>>n>>m;
+    vector<vector<int>>tmat(n,vector<int>(m));
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            cin>>tmat[i][j];
+        }
+    }
+    vector<vector<int>> transposed(m, vector<int>(n)); 
+     for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            transposed[j][i]=tmat[i][j];
+        }
+    }
+     for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            cout<<transposed[i][j]<<" ";
+        }
+         cout<<endl;
+    }
+    
+    
+    
+    return 0;
+}
