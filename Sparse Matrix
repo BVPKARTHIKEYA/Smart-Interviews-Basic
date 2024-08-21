@@ -1,0 +1,44 @@
+//creating a sparse matrix if 0's are more than half of its size
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+      int n,m;
+    cin>>n>>m;
+    int pro=n*m;
+    int a[n][m];
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    int count=0;
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            if(a[i][j]==0)
+            {
+                count++;
+            }
+        }
+    }
+    if(count>(pro/2))
+    {
+        cout<<"Yes";
+    }
+    else
+    {
+        cout<<"No";
+    }
+    
+    return 0;
+}
