@@ -1,0 +1,58 @@
+//Zero row and Zero Column
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void matrow(vector<vector<int>> &mat, int n, int m, int i) {
+    for (int j = 0; j < m; j++) {
+        if (mat[i][j] != 0) {
+            mat[i][j] = -1;
+        }
+    }
+}
+
+void matcol(vector<vector<int>> &mat, int n, int m, int j) {
+    for (int i = 0; i < n; i++) {
+        if (mat[i][j] != 0) {
+            mat[i][j] = -1;
+        }
+    }
+}
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+    vector<vector<int>> mat(n, vector<int>(m));
+    
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cin >> mat[i][j];
+        }
+    }
+    
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (mat[i][j] == 0) {
+                matrow(mat, n, m, i);
+                matcol(mat, n, m, j);
+            }
+        }
+    }
+    
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (mat[i][j] == -1) {
+                mat[i][j] = 0;
+            }
+        }
+    }
+    
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cout << mat[i][j] << " ";
+        }
+        cout << endl;
+    }
+    
+    return 0;
+}
