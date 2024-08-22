@@ -1,0 +1,23 @@
+//we can check whether kth bit is set or not by right shifting it and doing bitwise and operation and if it is 1 we will return true or else false
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n,k;
+    cin>>n>>k;
+    if((n>>k)&1==1)
+    {
+        cout<<"true";
+    }
+    else
+    {
+        cout<<"false";
+    }
+    return 0;
+}
