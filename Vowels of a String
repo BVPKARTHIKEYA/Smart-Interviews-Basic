@@ -1,0 +1,40 @@
+// Vowels of a String
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    bool a=false;
+    string s;
+    cin>>s;
+    int n=s.length();
+    for(int i=0;i<n;i++)
+    {
+        if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u')
+        {
+            a=true;
+        }
+        else if(s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U')
+        {
+            a=true;
+        }
+        else
+        {
+            a=false;
+            break;
+        }
+    }
+    if(a)
+    {
+        cout<<"Yes";
+    }
+    else
+    {
+        cout<<"No";
+    }
+    return 0;
+}
