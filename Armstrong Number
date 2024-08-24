@@ -1,0 +1,32 @@
+// Armstrong Number
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n;
+    cin>>n;
+    int sum=0;
+    int x=n;
+    while(n>0)
+    {
+        int r=n%10;
+        sum+=(r*r*r);
+        n/=10;
+        
+    }
+    if(sum==x)
+    {
+        cout<<"Yes";
+    }
+    else
+    {
+        cout<<"No";
+    }
+    
+    return 0;
+}
