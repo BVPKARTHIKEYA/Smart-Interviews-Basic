@@ -1,0 +1,20 @@
+// computing number of multiples common from 3 and 5
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    long long n;
+    cin>>n;
+    long long count=0;
+    long long count_3=(n)/3;
+    long long count_5=(n)/5;
+    long long count_15=(n)/15;
+    count=count_3+count_5-count_15;
+    cout<<count;
+    return 0;
+}
