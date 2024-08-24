@@ -1,0 +1,43 @@
+//narcissistic numbers
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int count=0;
+    int sum=0;
+    
+    
+    int n;
+    cin>>n;
+    int x=n;
+   int preq=n;
+    
+    while(n>0)
+    {
+        count++;
+        n/=10;
+    }
+   
+    while(preq>0)
+    {
+        int r=preq%10;
+        sum+=pow(r,count);
+        preq/=10;
+    }
+    if(sum==x)
+    {
+        cout<<"Yes";
+    }
+    else
+    {
+        cout<<"No";
+    }
+    
+    
+    return 0;
+}
