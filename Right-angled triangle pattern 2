@@ -1,0 +1,38 @@
+
+// For the given integer, print the right-angled triangle pattern.
+
+// Sample Input 0
+
+// 5
+// Sample Output 0
+
+// 1
+// 2 6
+// 3 7 10
+// 4 8 11 13
+// 5 9 12 14 15
+
+
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int n;
+    cin>>n;
+    for (int i=1;i<=n;i++) {
+        int k=i;
+        for(int j=1;j<=i;j++){
+            cout<<k<<" ";
+            k=k+n-j;
+        }
+        cout << endl;
+    }
+    return 0;
+}
