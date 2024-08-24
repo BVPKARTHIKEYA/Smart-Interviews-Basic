@@ -1,0 +1,36 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+long long int reverseDigits(long long int num) {
+    long long int rev = 0;
+    while (num > 0) {
+        rev = rev * 10 + num % 10;
+        num /= 10;
+    }
+    return rev;
+}
+
+int main() {
+    long long int n;
+    cin >> n;
+    
+    if (n == 0) {
+        cout << 0 << endl;
+        return 0;
+    }
+    
+    long long int rev = reverseDigits(abs(n));
+    if (n < 0) {
+        cout << -rev << endl;
+    } else {
+        cout << rev << endl;
+    }
+    
+    return 0;
+}
+
+       
